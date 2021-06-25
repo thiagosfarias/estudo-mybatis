@@ -7,4 +7,6 @@ CREATE TABLE produtos
     codigoBarra   VARCHAR(255) NOT NULL
 );
 
-INSERT INTO produtos (nome, codigoBarra) VALUES ('Notebook', 'a21sd654q98w4d');
+INSERT INTO produtos (nome, codigoBarra) VALUES ('Notebook', '102215500000');
+INSERT INTO produtos (nome, codigoBarra) VALUES ('iPhone', '18468000000215');
+INSERT INTO produtos (nome, codigoBarra) VALUES ('tablet', '78945620000225');

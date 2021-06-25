@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.produtomybatis.mapper.ProdutoMapper">
+    <insert id="insert">
+        insert into produtos (nome, codigoBarra)
+        values ('${produto.nome}', '${produto.codigoBarra}')
+    </insert>
+
+    <update id="update">
+        update produtos set
+                            nome = '${produto.nome}',
+                            codigoBarra = '${produto.codigoBarra}'
+        where id = '${id}'
+    </update>
+
+    <delete id="delete">
+        delete from produtos where id  = '${id}'
+    </delete>
+
+    <select id="findAll" resultType="com.example.produtomybatis.model.Produto">
+        select * from produtos
+    </select>
+
+    <select id="findBy" resultType="com.example.produtomybatis.model.Produto">
+        select * from produtos where id = '${id}'
+    </select>
+</mapper>
